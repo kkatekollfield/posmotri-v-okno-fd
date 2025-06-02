@@ -94,7 +94,7 @@ ol {
 }
 
 .content__list-item {
-  padding: 0 3px;
+  padding: 1px 3px;
 }
 
 .content__video-card {
@@ -103,6 +103,7 @@ ol {
 }
 
 .content__video-card-thumbnail {
+  display: block;
   width: 194px;
   height: 103px;
   object-fit: cover;
@@ -116,11 +117,14 @@ ol {
 }
 
 .content__video-card-description {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
   line-height: 16.2px;
   -webkit-line-clamp: 4;
+  line-clamp: 4;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  overflow: hidden;
 }
 
 h1 {
@@ -304,4 +308,21 @@ input[type='checkbox'] + span {
 .button:focus-visible {
   outline: 1px solid rgba(255, 255, 255, 1);
   outline-offset: 1px;
+}
+
+a:focus {
+  outline: none;
+}
+
+a.content__card-link:focus-visible > .content__video-card {
+  outline: 1px solid rgba(255, 255, 255, 1);
+}
+
+a.content__card-link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+a.content__card-link_current:active > .content__video-card {
+  background-color: rgba(84, 80, 80, 1);
 }

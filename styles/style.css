@@ -56,7 +56,6 @@ ol {
 .content {
   display: grid;
   grid-template-columns: 710px 400px;
-  grid-template-rows: 534px;
   grid-template-areas:
     "column1 column2";
   align-items: end;
@@ -79,7 +78,6 @@ ol {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  height: 54px;
 }
 
 .content__list-container {
@@ -114,7 +112,6 @@ ol {
 .content__video-card-description-container {
   flex-grow: 1;
   overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .content__video-card-description {
@@ -163,7 +160,7 @@ h1 {
 }
 
 .content__accent {
-  opacity: 0.25;
+  color: rgba(84, 80, 80, 1);
 }
 
 .content__card-link {
@@ -279,6 +276,7 @@ input[type='checkbox'] + span {
 }
 
 .button {
+  min-height: 34px;
   border: 1px solid rgba(255, 255, 255, 1);
   color: rgba(255, 255, 255, 1);
   font-family: 'Fira Sans Condensed', sans-serif;
@@ -290,13 +288,11 @@ input[type='checkbox'] + span {
 
 .button[type="submit"] {
   width: 194px;
-  height: 34px;
   margin-top: 20px;
 }
 
 .more-button {
   width: 390px;
-  height: 34px;
   margin: 30px 3px 3px;
 }
 
@@ -314,15 +310,19 @@ input[type='checkbox'] + span {
   outline-offset: 1px;
 }
 
+a.content__card-link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+a.content__card-link:active > .content__video-card {
+  background-color: rgba(84, 80, 80, 1);
+}
+
 a.content__card-link_current > .content__video-card {
   background-color: rgba(84, 80, 80, 1);
 }
 
 a.content__card-link:focus-visible > .content__video-card {
   outline: 1px solid rgba(255, 255, 255, 1);
-}
-
-a.content__card-link:hover {
-  text-decoration: underline;
-  cursor: pointer;
 }
